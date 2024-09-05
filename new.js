@@ -106,22 +106,4 @@ function display(result){
 sum(display,5,4);
 
 
-function mul(a,b,callback){
-    callback(a*b);
-}
-function sub(a,b,callback){
-    callback(a-b);
-}
-function add(a,b,callback){
-    callback(a+b);
-}
-function div(a,b,callback){
-    callback(a/b);
-}
-mul(8,3,(mull) => {
-    sub(15,5,(subb) =>{
-        add(mull,subb,(addd)=>{
-            div(addd,4(left))
-        })
-    }
-}
+
