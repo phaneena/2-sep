@@ -248,3 +248,15 @@ function sort(num1,num2){
 num1=[1,2];
 num2=[3,4];
 console.log(sort(num1,num2));
+
+
+s='the sky is blue';
+function reverse(s){
+    arr=s.split(' ');
+    arr1=[];
+    for(i=arr.length-1;i>=0;i--){
+        arr1.push(arr[i])
+    }
+    return arr1.join(' ');
+}
+console.log(reverse(s));
