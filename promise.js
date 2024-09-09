@@ -137,38 +137,64 @@
 
 
 
-cart=['shoe','pant','heels','top'];
-const promise=createodrer(cart);
-function createodrer(cart){
-    const pr=new Promise(function(resolve,reject){
-        if(!validcart(cart)){
-            const err=new Error('not valid');
-            reject(err)
-        }
-        orderid='1234';
-        if(orderid){
-            resolve(orderid);
-        }
-    })
-    return pr;
-}
-function validcart(cart){
-    return true;
-}
-function proceedtopayment(orderid){
-    return new Promise(function (resolve,reject){
-        resolve('payment successfully')
-    })
-}
-promise.then((orderid)=>{
-    console.log(orderid);
-    return proceedtopayment(orderid);
+// cart=['shoe','pant','heels','top'];
+// const promise=createodrer(cart);
+// function createodrer(cart){
+//     const pr=new Promise(function(resolve,reject){
+//         if(!validcart(cart)){
+//             const err=new Error('not valid');
+//             reject(err)
+//         }
+//         orderid='1234';
+//         if(orderid){
+//             resolve(orderid);
+//         }
+//     })
+//     return pr;
+// }
+// function validcart(cart){
+//     return true;
+// }
+// function proceedtopayment(orderid){
+//     return new Promise(function (resolve,reject){
+//         resolve('payment successfully')
+//     })
+// }
+// promise.then((orderid)=>{
+//     console.log(orderid);
+//     return proceedtopayment(orderid);
     
-})
-.then((res)=>{
-    console.log(res)
+// })
+// .then((res)=>{
+//     console.log(res)
     
-})
-.catch((error)=>{
-    console.log(error.message)
+// })
+// .catch((error)=>{
+//     console.log(error.message)
+// })
+
+
+
+
+// 
+
+
+
+// let pr1=new Promise(function(resolve,reject){
+//     setTimeout(()=>{
+//         resolve('successeed')
+//     },5000)
+// });
+ 
+
+let pr=new Promise((resolve,reject)=>{
+    resolve('successed')
+});
+let pr1=new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+        resolve('succcessfully cmplt')
+    },2000)
+});
+Promise.any([pr,pr1]).then((resolve)=>{
+    console.log(resolve);
 })
