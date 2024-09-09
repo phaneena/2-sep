@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="table.js"></script>
+    <style>
+        .tableborder{
+            margin: auto;
+            width: 90%;
+            display: flex;
+        }
+        table{
+            width: 100%;
+            text-align: center;
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        img{
+            width: 100px;
+        }
+        table th{
+            width: 25%;
+            border: 1px solid black;
+        }
+        table td{
+            width:25% ;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="tableborder">
+        <table>
+            <tr>
+                <th>SI NO</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Image</th>
+            </tr>
+            <tbody id="tablebody">
+
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
